@@ -1,55 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-	<meta charset="UTF-8"/>
-	<meta name="description"	content="Data Visualisation Exercise 1"/>
-	<meta name="keywords"		  content="HTML, CSS"/>
-	<meta name="author"			  content="Your name here"/>
-
-	<title>Task 1.1 HTML and CSS Demo Page</title>
-	<!--Insert description of exercise  -->
-
-	<style>
-	</style>
-	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-	<link rel="stylesheet" href="stylesheet.css" />
-
-</head>
-
-<body>
-
-	<h1>Drawing Shapes with SVG</h1>
-	<!-- <svg width="500" height="50">
-		<g transform="translate(20, 0)">
-		<circle cx="25", cy="30", r="25" fill="cornflowerblue"/>
-		<rect x="50", y="5", width="50", height="50" fill="rgb(100, 149, 237)" />
-		<ellipse cx="140" cy="30" rx="40" ry="25" fill="rgba(100, 149, 237, 0.5)" />
-		<Line x1="0" y1="30" x2="180" y2="30" stroke="black" strock-width="5" />
-		</g>
-	</svg>
-	!-->
-	
-	<svg width="500" height="500">
-		<g transform="translate(20, 0)">
-		  <circle cx="50" cy="40" r="40" stroke="green" stroke-width="5" fill="yellow" />
-		  <circle cx="150" cy="40" r="40" stroke="green" stroke-width="5" fill="yellow" />
-		  <circle r="10" cx="50" cy="40" fill="red" />
-		  <circle r="10" cx="150" cy="40" fill="red" />
-		  <line x1="10" y1="100" x2="200" y2="60" style="stroke:red;stroke-width:2" />
-		  Sorry, your browser does not support inline SVG.
-		</g>
-	  </svg>
-	  
-	  <svg width="500" height="600">
-		<g transform="translate(20, 400)">
-		  <rect x="50" y="50" width="50" height="500" fill="rgb(100, 149, 237)" />
-		</g>
-	  </svg>
-	  
-	<br>
-	<br>
-	<footer style="color:grey">COS30045 Data Visualisation<br>Joe Bloggs</footer>
-
-</body>
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="description"	content="Data Visualisation Exercise 1"/>
+    <meta name="keywords"		  content="HTML, CSS"/>
+    <meta name="author"			  content="Your name here"/>
+    <title>Task 1.1 HTML and CSS Demo Page
+    </title>
+    <!--Insert description of exercise  -->
+    <style>
+    </style>
+    <!-- Font Import -->
+    <link href="https://fonts.googleapis.com/css2?family=Viga&display=swap" rel="stylesheet">
+    <!-- CSS Import -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="stylesheet.css" />
+  </head>
+  <body>
+    <article>
+      <a name="top">
+      </a>
+      <section>
+        <p id="top-menu">Welcome to biubiu!
+        </p>
+      </section>
+      <header>
+        <h1 class="title_cybernerd">
+          <a href="../index.html" class>Home
+          </a>
+        </h1> 
+        <div class="zoom">
+          <nav id="nav">
+            <ul id="menu_ul">
+              <button id="menu">Menu
+              </button>
+              <li class="menu_li">
+                <a href="lab_1.1.html">Lab 1.1
+                </a>
+              </li> 
+              <li class="menu_li">
+                <a href="lab_1.2.html">Lab 1.2
+                </a>
+              </li> 
+              <li class="menu_li">
+                <a href="lab_1.3.html">Lab 1.3
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+      <!--<hr>-->
+    </article>
+    <article class="content">
+      <h1>Drawing Shapes with SVG
+      </h1>
+      <!-- <svg width="500" height="50">
+<g transform="translate(20, 0)">
+<circle cx="25", cy="30", r="25" fill="cornflowerblue"/>
+<rect x="50", y="5", width="50", height="50" fill="rgb(100, 149, 237)" />
+<ellipse cx="140" cy="30" rx="40" ry="25" fill="rgba(100, 149, 237, 0.5)" />
+<Line x1="0" y1="30" x2="180" y2="30" stroke="black" strock-width="5" />
+</g>
+</svg>
+!-->
+      <article class="content_center">
+        <br>
+		<p>A Emo Robot</p>
+        <svg width="500" height="300">
+          <g transform="translate(150, 0)">
+            <circle cx="50" cy="50" r="40" stroke="blue" stroke-width="5" fill="white" />
+            <circle cx="150" cy="50" r="40" stroke="blue" stroke-width="5" fill="white" />
+            <polygon points="100,90 130,120 70,120" style="fill:blue;stroke:blue;stroke-width:3" />
+            <circle r="10" cx="50" cy="50" fill="black" />
+            <circle r="10" cx="150" cy="50" fill="black" />
+            <line x1="0" y1="150" x2="200" y2="150" style="stroke:blue;stroke-width:12" />
+            Sorry, your browser does not support inline SVG.
+          </g>
+        </svg>
+      </article>
+      <br>
+      <article class="content_center">
+        <p>Pet Ownership in 2019
+        </p>
+        <svg width="500" height="600">
+          <g transform="translate(0, 0)">
+            <!--Rectanglen-->
+            <rect x="0" y="0" width="500" height="600" fill="white" />
+            <!--Dogs-->
+            <rect x="50" y="50" width="50" height="500" fill="rgb(100, 149, 237)" />
+            <!--Cats-->
+            <rect x="110" y="200" width="50" height="350" fill="rgb(100, 149, 237)" />
+            <!--Fish-->
+            <rect x="170" y="400" width="50" height="150" fill="rgb(100, 149, 237)" />
+            <!--Birds-->
+            <rect x="230" y="430" width="50" height="120" fill="rgb(100, 149, 237)" />
+            <!--Small M-->
+            <rect x="290" y="500" width="50" height="50" fill="rgb(100, 149, 237)" />
+            <!--Reptiles-->
+            <rect x="350" y="525" width="50" height="25" fill="rgb(100, 149, 237)" />
+            <!--Other Pets-->
+            <rect x="410" y="525" width="50" height="25" fill="rgb(100, 149, 237)" />
+          </g>
+        </svg>
+      </article>
+      <br>
+      <br>
+      <footer>&copy; COS30045 Data Visualisation. 
+        <a href="mailto:105215045@student.swin.edu.au">105215045@student.swin.edu.au
+        </a> - All rights reserved.
+      </footer>
+    </article>
+  </body>
 </html>

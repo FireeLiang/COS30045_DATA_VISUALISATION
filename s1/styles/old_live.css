@@ -1,0 +1,623 @@
+/* Golbal font */
+* {
+  font-family: "Viga", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Top Menu */
+#top-menu{
+  background-color: #007afc;
+  color: white;
+}
+
+/* Title menu */
+.title_cybernerd a{
+  font-size: 36px;
+  color:#007afc;
+  text-decoration: none;
+}
+
+p#top-menu{
+  padding:12px 12px 6px 12px;
+}
+
+#menu_font{
+  font-family: "Viga", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+.menu_li a{
+	text-decoration: none;
+	padding: 0.2em 0.6em;
+	border-bottom: 2px solid #ccc;
+  color: black;
+}
+
+hr {
+  border: 1px solid lightgray;
+}
+
+nav{
+    clear:both;
+}
+
+.menu_li :hover {
+	background-color: lightblue;
+	border-color: darkblue;
+}
+
+header {
+    background-color: #f8fafe;
+  } 
+  /* Use space-between */
+  header {
+    display: flex;
+    justify-content: space-between; 
+    padding: 2.0rem;
+  }
+  #menu_ul{
+    display: flex;
+    align-items: center;
+
+  }
+  .menu_li {
+    list-style: none;
+    color: darkgray;
+    margin-inline: 1rem;
+  }
+  #menu {
+    display:none;
+  } 
+  .show{
+    display:block;
+  }
+  @media screen and (max-width: 500px){
+    #menu {
+      display:block;
+      padding-inline: 1rem;
+    } 
+    nav{
+      display:none; 
+      position: absolute;
+      background-color: darkblue;
+      right: 0rem;
+      top: 0rem;
+      height: 100vh;
+      width: 7rem;
+    }
+    #menu_ul{ 
+      margin-top: 3rem;
+      flex-direction: column;
+      row-gap: 5rem;
+    }
+    
+  }
+  *, *::before, *::after {
+      box-sizing: border-box;
+      list-style-type: none;
+      text-decoration: none;
+      padding: 0;
+      margin: 0;  
+  }
+
+/* Menu login button */
+  .menu-login-button{
+    background-color: #007afc;
+    border: none;
+    color: white;
+    padding: 10px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 6px;
+  }
+
+  
+a.menu-login-button{
+  text-decoration: none;
+}
+
+li.button_menu_li {
+  list-style: none;
+}
+
+/* End of Menu */
+
+
+
+/* Sizing the image */
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: auto;
+  max-width: 220px;
+  height: auto;
+}
+
+.image-left, .image-right
+{
+	margin: 1em 0;
+}
+
+@media (min-width: 20em)
+{
+	.image-left, .image-right
+	{
+		display: flex;
+		align-items: center;
+    margin-left: 100px;
+    margin-right: 100px;
+	}
+
+	.image-left img
+	{
+
+		margin-right: 1em;
+		float: left; /* fallback */
+	}
+
+	.image-right img
+	{
+		order: 1;
+		margin-left: 1em;
+		float: right; /* fallback */
+	}
+	
+	/* clearfix for fallback */
+	.image-left::after,
+	.image-right::after
+	{
+		content: "";
+  	display: block;
+		clear: both;
+	}
+}
+
+@media (min-width: 30em)
+{
+	.image-left img, .image-right img
+	{
+		flex-shrink: 0;
+    margin:0px 50px 50px 50px;
+	}
+}
+
+
+.container { 
+  position: relative;
+  height: //200px;
+  border: //3px solid green; 
+}
+
+
+/* Start your journey button */
+.center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.buttoncenter {
+  border: none;
+  color: white;
+  padding: 10px 15px 10px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  margin-top: 100px;
+  cursor: pointer;
+  align-items: center;
+  border-radius: 6px;
+}
+
+.button2 {background-color: #007afc;}
+
+/* H1 */
+#image-left-title{
+  font-size:2em;
+}
+
+
+/* School cards & about cards */
+.cards{
+
+  width:25%;
+  height:300px;
+
+  margin:5px;
+  display: inline-block;
+  text-align: center;
+  padding: 15px;
+}
+
+.center-cards {
+  margin: auto;
+  width: 100%;
+  background-color: #f8fafe;
+  padding: 30px;
+  margin-bottom: 3em;
+  text-align: center;
+  
+}
+
+.center-cards h1{
+  font-size: 2em;
+  margin:10px;
+}
+
+.center-cards p{
+  margin: 6px
+}
+
+.center-cards img, h2{
+  margin-bottom:15px;
+
+}
+
+
+
+/* TAB */
+.wrapper {
+  max-width: 50rem;
+  width: 100%;
+  margin: 0 auto;
+}
+.tabs {
+  position: relative;
+  margin: 3rem 0;
+  background: #f8fafe;
+  height: 14.75rem;
+}
+.tabs::before,
+.tabs::after {
+  content: "";
+  display: table;
+}
+.tabs::after {
+  clear: both;
+}
+.tab {
+  float: left;
+}
+.tab-switch {
+  display: none;
+}
+.tab-label {
+  position: relative;
+  display: block;
+  line-height: 2.75em;
+  height: 3em;
+  padding: 0 1.618em;
+  background: #f8fafe;
+  border-right: 0.125rem solid #f8fafe;
+  color: black;
+  cursor: pointer;
+  top: 0;
+  transition: all 0.25s;
+}
+.tab-label:hover {
+  top: -0.25rem;
+  transition: top 0.25s;
+}
+.tab-content {
+  height: 12rem;
+  position: absolute;
+  z-index: 1;
+  top: 2.75em;
+  left: 0;
+  padding: 1.618rem;
+  background: #fff;
+  color: #2c3e50;
+  border-bottom: 0.25rem solid #bdc3c7;
+  opacity: 0;
+  transition: all 0.35s;
+}
+.tab-switch:checked + .tab-label {
+  background: darkgrey;
+  color: black;
+  border-bottom: 0;
+  border-right: 0.125rem solid #fff;
+  transition: all 0.35s;
+  z-index: 1;
+  top: -0.0625rem;
+}
+.tab-switch:checked + label + .tab-content {
+  z-index: 2;
+  opacity: 1;
+  transition: all 0.35s;
+}
+
+#tab_center_h1{
+  text-align: center;
+  font-size: 2em;
+}
+
+#tabs_copyright{
+  margin-bottom: 1.5em;
+  margin-top: 2.0em;
+}
+/* End of TAB */
+
+/* FAQ */
+.container h1{
+  margin-top: 2.0em;
+  margin-bottom: 1.5em;
+}
+
+.container h1{
+  color: black;
+  text-align: center;
+  font-size: 2em;
+  padding-bottom: 10px;
+}
+
+details{
+  background-color: #f8fafe;
+  color: black;
+  //font-size: //1.5rem;
+  padding: 3em 10em;
+}
+
+summary {
+  padding: .5em 1.3rem;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;  
+  transition: height 1s ease;
+  border-bottom: 1px solid #aaa;
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
+summary:after{
+  content: "\002B";
+}
+
+details[open] summary {
+    border-bottom: 1px solid #aaa;
+    margin-bottom: .5em;
+}
+
+details[open] summary:after{
+  content: "\00D7";
+}
+
+details[open] div{
+  padding: .5em 1em;
+}
+/* End of FAQ */
+
+/* School card */
+.school_cards{
+  width:25%;
+  height:200px;
+  margin:5px;
+  display: inline-block;
+  text-align: center;
+  padding: 15px;
+}
+
+
+/* Contact Us card */
+.about_cards{
+  width://25%;
+  height:200px;
+  margin:5px;
+  display: inline-block;
+  text-align: left;
+  padding: 15px;
+}
+
+/* Group to combine the background */
+.school_faq_background{
+  background-color: #f8fafe;
+}
+
+/* Customize li element */
+li {
+  list-style: disc outside none;
+  display: list-item;
+  margin-left: 1em;
+  }
+
+/* Bottom sitemap */
+li.sitemap_li{
+  list-style: none;
+  text-decoration: none;
+  padding: 5px 0px 5px 0px;
+}
+
+li.sitemap_li a{
+  color: black;
+}
+
+.button_sitemap_li{
+  color: white;
+  margin-bottom: 2.0em;
+}
+
+/* Menu zoom. Better accessibility */
+.zoom {
+  transition: transform .2s;
+}
+
+.zoom:hover {
+  -ms-transform: scale(1.05); /* IE 9 */
+  -webkit-transform: scale(1.05); /* Safari 3-8 */
+  transform: scale(1.05); 
+}
+
+/* Animation */
+.w3-animate-left{
+  position:relative;
+  animation:animateleft 3.0s
+}
+
+@keyframes animateleft
+{
+  from
+  {left:-300px;opacity:0} 
+  to
+  {left:0;opacity:1}
+}
+
+/* Animation */
+.w3-animate-bottom
+{position:relative;
+  animation:animatebottom 5.0s;
+}@keyframes animatebottom
+{
+  from
+  {bottom:-300px;opacity:0} 
+  to
+  {bottom:0;opacity:1}
+}
+
+
+/* Class for center text */
+.text_center{
+  text-align: center;
+}
+
+
+/* Button back to top */
+.back_to_top_fixed{
+position: fixed;
+bottom: 0;
+right: 0;
+width: 150px;
+}
+
+.back_to_top{
+  text-align: center;
+}
+
+/* About Us */
+#content {
+  background-color: #f8fafe;
+  padding: 0.5rem;
+  display: flex;
+}
+
+#left,#right {
+  background-color: white;
+  border: 1px solid lightgray;
+  padding: 0.5rem;
+  flex-grow: 1;
+  color: black;
+}
+
+#left{
+	width: 50%;
+    padding: 30px 0;
+    }
+    
+#left h1, img{
+	text-align: center;
+    }
+
+#right ul{
+  padding-left: 1em;
+}
+    
+#right{
+	width: 50%;
+    padding: 30px 0;
+    }
+
+/* Footer */
+footer{
+  text-align: center;
+}
+
+/* Login.html */
+/* Login Page CSS */
+body {font-family: Arial, Helvetica, sans-serif;}
+form {border: 3px solid #f1f1f1;}
+
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+button {
+   background-color: #007afc;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+}
+
+img.avatar {
+  width: 40%;
+  border-radius: 50%;
+}
+
+.form_container {
+  padding: 16px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
+}
+
+button.cancelbtn a{
+  text-decoration: none;
+  color: white !important;
+}
+
+#login-title{
+  text-align: center;
+  margin: 2em;
+}
+
+#login-form{
+  margin-left: 20em;
+  margin-right: 20em;
+}
