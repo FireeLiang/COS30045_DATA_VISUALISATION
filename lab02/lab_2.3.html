@@ -20,8 +20,8 @@
         <script>
         //Example from Murray
 
-        var w = 600;
-        var h = 100;
+        var w = 800;
+        var h = 200;
 
         var svg = d3.select("body")
                     .append("svg")
@@ -29,16 +29,16 @@
                     .attr("height", h);
 
         var dataset = [
-                        [5, 20],
-                        [480, 90],
-                        [250, 50],
-                        [100, 33],
-                        [330, 95],
-                        [410, 12],
-                        [475, 44],
-                        [25, 67],
-                        [85, 21],
-                        [220, 88]
+                        [5, 20, 5],
+                        [480, 90, 5],
+                        [250, 50, 10],
+                        [100, 33, 5],
+                        [330, 95, 6],
+                        [410, 12, 3],
+                        [475, 44, 10],
+                        [25, 67, 5],
+                        [85, 21, 5],
+                        [220, 88, 10]
         ];
 
 
@@ -54,7 +54,10 @@
             .attr("cy", function(d){
                 return d[1];
             })
-            .attr("r", 5)
+            .attr("r", function(d) {
+                return d[2];
+            } )
+            // .attr("r", 5)
             .attr("fill", "rgb(49, 145, 0)");
 
             svg.selectAll("text")
