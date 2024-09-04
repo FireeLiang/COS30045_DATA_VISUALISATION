@@ -1,85 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="description" content="Data Visualisation Exercise 1" />
-    <meta name="keywords" content="HTML, CSS" />
-    <meta name="author" content="Your name here" />
-
-    <title>Task 2.2 D3 Drawing with Data</title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Data Visualisation Exercise 1">
+    <meta name="keywords" content="HTML, CSS">
+    <meta name="author" content="Your name here">
+    <title>Task 2.3 D3 Drawing with Data - Scatter Plot</title>
     <script src="https://d3js.org/d3.v7.min.js"></script>
+    <!-- Font Import -->
+    <link href="https://fonts.googleapis.com/css2?family=Viga&display=swap" rel="stylesheet">
+    <!-- CSS Import -->
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    </head>
-    <body>
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+<body>
+    <article>
+        <section>
+            <p id="top-menu">Welcome to biubiu!</p>
+        </section>
+        <header>
+            <h1 class="title_cybernerd"><a href="../index.html">Home</a></h1>
+            <div class="zoom">
+                <nav id="nav">
+                    <button id="menu">Menu</button>
+                    <ul id="menu_ul">
+                        <li class="menu_li"><a href="lab_2.1.html">Lab 2.1</a></li>
+                        <li class="menu_li"><a href="lab_2.2.html">Lab 2.2</a></li>
+                        <li class="menu_li"><a href="lab_2.3.html">Lab 2.3</a></li>
+                        <li class="menu_li"><a href="lab_2.4.html">Lab 2.4</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+    </article>
 
-        <h1>Drawing with Data</h1>
-        <h2>Author: Put your name here</h2>
-
-
- 
+    <article class="content">
+        <h1>Drawing with Data - Scatter Plot</h1>
+        <h2>Author: Liang</h2>
+        <br>
         <script>
-        //Example from Murray
+            // Example from Murray
+            var w = 800;
+            var h = 160;
 
-        var w = 800;
-        var h = 200;
+            var svg = d3.select("article.content")
+                        .append("svg")
+                        .attr("width", w)
+                        .attr("height", h);
 
-        var svg = d3.select("body")
-                    .append("svg")
-                    .attr("width", w)
-                    .attr("height", h);
+            var dataset = [
+                [5, 20, 5], [480, 90, 5], [250, 50, 10],
+                [100, 33, 5], [330, 95, 6], [410, 12, 3],
+                [475, 44, 10], [25, 67, 5], [85, 21, 5],
+                [220, 88, 10]
+            ];
 
-        var dataset = [
-                        [5, 20, 5],
-                        [480, 90, 5],
-                        [250, 50, 10],
-                        [100, 33, 5],
-                        [330, 95, 6],
-                        [410, 12, 3],
-                        [475, 44, 10],
-                        [25, 67, 5],
-                        [85, 21, 5],
-                        [220, 88, 10]
-        ];
-
-
-
-        svg.selectAll("circle")
-            .data(dataset)
-            .enter()
-            .append("circle")
-
-            .attr("cx", function(d) {
-                return d[0];
-            })
-            .attr("cy", function(d){
-                return d[1];
-            })
-            .attr("r", function(d) {
-                return d[2];
-            } )
-            // .attr("r", 5)
-            .attr("fill", "rgb(49, 145, 0)");
+            svg.selectAll("circle")
+                .data(dataset)
+                .enter()
+                .append("circle")
+                .attr("cx", function(d) { return d[0]; })
+                .attr("cy", function(d) { return d[1]; })
+                .attr("r", function(d) { return d[2]; })
+                .attr("fill", "rgb(49, 145, 0)");
 
             svg.selectAll("text")
                 .data(dataset)
                 .enter()
                 .append("text")
-                .text(function(d) {
-                    return d[0] + "," +d[1];
-                })
-                .attr("x", function(d) {
-                    return d[0] + 10;
-                })
-                .attr("y", function(d){
-                    return d[1] - 2;
-                });
-
-
+                .text(function(d) { return d[0] + "," + d[1]; })
+                .attr("x", function(d) { return d[0] + 10; })
+                .attr("y", function(d) { return d[1] - 1; });
         </script>
 
-
-        <p style="color:grey"<i>This paragraph is outside D3 script block</i></p>
-        <br>
-        <bf>
-        <footer class="w3-panel w3-leftbar w3-border-red w3-pale-red">COS30045 Data Visualisation<br>Joe Bloggs</footer>
-    </body>
+        <footer class="w3-panel w3-leftbar w3-border-red w3-pale-red">
+            COS30045 Data Visualisation<br>Joe Bloggs
+        </footer>
+    </article>
+</body>
+</html>

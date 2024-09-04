@@ -1,72 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="description" content="Data Visualisation Exercise 1" />
     <meta name="keywords" content="HTML, CSS" />
     <meta name="author" content="Your name here" />
-
     <title>Task 2.1 D3 Data Binding</title>
-
     <script src="https://d3js.org/d3.v7.min.js"></script>
+    <!-- Font Import -->
+    <link href="https://fonts.googleapis.com/css2?family=Viga&display=swap" rel="stylesheet">
+    <!-- CSS Import -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="stylesheet.css" />
+</head>
+<body>
+    <article>
+        <a name="top"></a>
+        <section>
+            <p id="top-menu">Welcome to biubiu!</p>
+        </section>
+        <header>
+            <h1 class="title_cybernerd">
+                <a href="../index.html">Home</a>
+            </h1>
+            <div class="zoom">
+                <nav id="nav">
+                    <ul id="menu_ul">
+                        <li class="menu_li"><a href="lab_2.1.html">Lab 2.1</a></li>
+                        <li class="menu_li"><a href="lab_2.2.html">Lab 2.2</a></li>
+                        <li class="menu_li"><a href="lab_2.3.html">Lab 2.3</a></li>
+                        <li class="menu_li"><a href="lab_2.4.html">Lab 2.4</a></li>
+                    </ul>
+                    <button id="menu">Menu</button>
+                </nav>
+            </div>
+        </header>
+    </article>
 
-    </head>
-    <body>
-
+    <article class="content">
         <h1>The D3 journey starts here...</h1>
-
-<!--      <script>
-            //example from Murray
-
-            d3.select("body")
-                .append("p")
-                .text("New paragraph!");
-
-        </script>
-
         <script>
-            //example from Murray
+            var dataset = [14, 5, 26, 23, 9];
 
-        var dataset = [14, 5, 26, 23, 9];
-
-            d3.select("body").selectAll("p")
+            d3.select("article.content").selectAll("p")
                 .data(dataset)
                 .enter()
                 .append("p")
-                .text("New Paragraph");
+                .style("color", function(d) {
+                    return d > 10 ? "red" : "black";
+                })
+                .text(function(d) {
+                    return d > 10
+                        ? "Warning: NAME watched " + d + " cat videos today."
+                        : "NAME watched " + d + " cat videos today.";
+                });
 
+            console.log(d3.selectAll("p"));
         </script>
--->  
-        <script>
-            //example from Murray
-
-        var dataset = [14, 5, 26, 23, 9];
-
-            d3.select("body").selectAll("p")
-                .data(dataset)
-                .enter()
-                .append("p")
-                .style("color",function(d){
-                    if(d >10){
-                        return "red"
-                    }
-            })
-                .text(function(d) 
-                {
-                    if(d>10){
-                        return "Warning: NAME watched " + d + " cat videos today.";
-                    }
-                    else{
-                        return "NAME watched " + d + " cat videos today.";
-                    }
-        });
-
-        console.log(d3.selectAll("p"));
-
-        </script>
-
-        <p style="color:grey"<i>This paragraph is outside D3 script block</i></p>
         <br>
-        <bf>
-        <footer class="w3-panel w3-leftbar w3-border-red w3-pale-red">COS30045 Data Visualisation<br>Joe Bloggs</footer>
-    </body>
+        <p style="color:grey"><i>This paragraph is outside D3 script block</i></p>
+        
+        <footer class="w3-panel w3-leftbar w3-border-red w3-pale-red">
+            COS30045 Data Visualisation<br>Joe Bloggs
+        </footer>
+    </article>
+</body>
+</html>

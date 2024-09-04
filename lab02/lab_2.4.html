@@ -6,17 +6,47 @@
     <meta name="keywords" content="HTML, CSS" />
     <meta name="author" content="Your name here" />
 
-    <title>Task 2.2 D3 Drawing with Data</title>
+    <title>Task 2.4 D3 Chart drawn from CSV file</title>
     <script src="https://d3js.org/d3.v7.min.js"></script>
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    </head>
-    <body>
+        <!-- Font Import -->
+        <link href="https://fonts.googleapis.com/css2?family=Viga&display=swap" rel="stylesheet">
+        <!-- CSS Import -->
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="stylesheet.css">
+  </head>
+  <body>
+      <article>
+          <section>
+              <p id="top-menu">Welcome to biubiu!</p>
+          </section>
+          <header>
+              <h1 class="title_cybernerd"><a href="../index.html">Home</a></h1>
+              <div class="zoom">
+                  <nav id="nav">
+                      <button id="menu">Menu</button>
+                      <ul id="menu_ul">
+                          <li class="menu_li"><a href="lab_2.1.html">Lab 2.1</a></li>
+                          <li class="menu_li"><a href="lab_2.2.html">Lab 2.2</a></li>
+                          <li class="menu_li"><a href="lab_2.3.html">Lab 2.3</a></li>
+                          <li class="menu_li"><a href="lab_2.4.html">Lab 2.4</a></li>
+                      </ul>
+                  </nav>
+              </div>
+          </header>
+      </article>
+      <article class="content">
+    <h1>Chart drawn from CSV file</h1>
+    <h2>Author: Liang</h2>
 
-        <h1>Drawing with Data</h1>
-        <h2>Author: Put your name here</h2>
+    <div id="chart1"></div>
+    <figcaption>Fig 1. Pet ownership in 2019</figcaption>
+    <div id="chart2"></div>
+    <figcaption>Fig 2. Pet ownership in 2021</figcaption>
 
-        <p id="chart"></p>
-        <script src="Task_2.4.js"></script>
-        <footer class="w3-panel w3-leftbar w3-border-red w3-pale-red">COS30045 Data Visualisation<br>Joe Bloggs</footer>
-    </body>
+    <script src="Task_2.4.js"></script>
+    <footer class="w3-panel w3-leftbar w3-border-red w3-pale-red">
+      COS30045 Data Visualisation<br>Joe Bloggs
+    </footer>
+  </article>
+  </body>
 </html>
