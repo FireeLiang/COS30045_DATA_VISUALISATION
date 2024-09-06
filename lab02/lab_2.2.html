@@ -6,6 +6,7 @@
     <meta name="keywords" content="HTML, CSS">
     <meta name="author" content="Your name here">
     <title>Task 2.2 D3 Drawing with Data</title>
+    <!-- D3.js Library -->
     <script src="https://d3js.org/d3.v7.min.js"></script>
     <!-- Font Import -->
     <link href="https://fonts.googleapis.com/css2?family=Viga&display=swap" rel="stylesheet">
@@ -40,18 +41,20 @@
         <h2>Author: Liang</h2>
 
         <script>
-            // Example from Murray
+            // Set up SVG dimensions and dataset
             var w = 500;
             var h = 150;
             var barPadding = 3;
             var dataset = [14, 5, 26, 23, 9, 14, 5, 26, 23, 9];
 
+            // Create SVG container
             var svg = d3.select("article.content")
                         .append("svg")
                         .attr("width", w)
                         .attr("height", h)
                         .attr("fill", "rgb(106, 90, 205)");
 
+            // Draw bars for each data point
             svg.selectAll("rect")
                 .data(dataset)
                 .enter()
@@ -69,6 +72,7 @@
                     return d * 4;
                 });
 
+            // Add text labels on bars
             svg.selectAll("text")
                 .data(dataset)
                 .enter()
@@ -78,7 +82,7 @@
                 })
                 .attr("fill", "black")
                 .attr("x", function(d, i) {
-                    // Position text at the center of each bar
+                    // Center text on each bar
                     return i * (w / dataset.length) + (w / dataset.length - barPadding) / 2;
                 })
                 .attr("text-anchor", "middle")

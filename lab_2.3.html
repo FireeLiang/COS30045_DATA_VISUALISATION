@@ -6,10 +6,11 @@
     <meta name="keywords" content="HTML, CSS">
     <meta name="author" content="Your name here">
     <title>Task 2.3 D3 Drawing with Data - Scatter Plot</title>
-    <!-- D3.js Library -->
     <script src="https://d3js.org/d3.v7.min.js"></script>
+
     <!-- Font Import -->
     <link href="https://fonts.googleapis.com/css2?family=Viga&display=swap" rel="stylesheet">
+
     <!-- CSS Import -->
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="stylesheet.css">
@@ -44,17 +45,15 @@
         <br>
 
         <script>
-            // Set up SVG dimensions
+            // Example from Murray
             var w = 800;
             var h = 160;
 
-            // Create SVG container
             var svg = d3.select("article.content")
                         .append("svg")
                         .attr("width", w)
                         .attr("height", h);
 
-            // Data for scatter plot
             var dataset = [
                 [5, 20, 5], [480, 90, 5], [250, 50, 10],
                 [100, 33, 5], [330, 95, 6], [410, 12, 3],
@@ -62,7 +61,6 @@
                 [220, 88, 10]
             ];
 
-            // Draw circles for data points
             svg.selectAll("circle")
                 .data(dataset)
                 .enter()
@@ -72,7 +70,6 @@
                 .attr("r", function(d) { return d[2]; })
                 .attr("fill", "rgb(49, 145, 0)");
 
-            // Add labels to each data point
             svg.selectAll("text")
                 .data(dataset)
                 .enter()
