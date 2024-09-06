@@ -55,7 +55,7 @@ function drawChart1(){
                 return i * (w / petOwnership.length) + (w / petOwnership.length - barPadding) / 2;
             })
             .attr("y", function(d) {
-                return h - (d.pets * 4) - 5;
+                return h - (d.pets * 4) + 15;  // Position slightly above the bar
             })
             .attr("text-anchor", "middle");
 
@@ -127,7 +127,7 @@ function drawChart2(){
                 return i * (w / petOwnership.length) + (w / petOwnership.length - barPadding) / 2;
             })
             .attr("y", function(d) {
-                return h - (d.pets * 4) - 5;
+                return h - (d.pets * 4) + 15;  // Adjusted for consistency
             })
             .attr("text-anchor", "middle");
 
@@ -148,4 +148,3 @@ function drawChart2(){
             .attr("text-anchor", "middle");
     }
 }
-
