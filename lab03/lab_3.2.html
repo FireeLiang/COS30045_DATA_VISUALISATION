@@ -31,6 +31,7 @@
                     <ul id="menu_ul">
                         <li class="menu_li"><a href="lab_3.1.html">Lab 3.1</a></li>
                         <li class="menu_li"><a href="lab_3.2.html">Lab 3.2</a></li>
+                        <li class="menu_li"><a href="lab_3.2_demo.html">Lab 3.2 (Demo)</a></li>
                     </ul>
                 </nav>
             </div>
@@ -89,7 +90,7 @@ svg.selectAll("circle")
     .attr("cx", function(d) { return xScale(d[0]); })
     .attr("cy", function(d) { return yScale(d[1]); })
     .attr("r", function(d) { return d[2]; })
-    .attr("fill", function(d) { return d[0] === 500 ? "red" : "rgb(49, 145, 0)"; });
+    .attr("fill", function(d) { return d[0] >= 500 ? "red" : "rgb(49, 145, 0)"; });
 
 // Append labels
 svg.selectAll("text")
